@@ -1,0 +1,5 @@
+img {
+  height: 70vh;
+  width: 30vw;
+  transition: all 0.2s ease-in;
+}
