@@ -7,11 +7,11 @@ const Question = (props) => {
     display === "hide" ? setDisplay("show") : setDisplay("hide");
   };
   return (
-    <>
+    <div className="container">
       <h1>{props.q}</h1>
       <p className={display}>{props.answer}</p>
       <button onClick={displayHandler}>{display === "hide" ? "+" : "-"}</button>
-    </>
+    </div>
   );
 };
 
