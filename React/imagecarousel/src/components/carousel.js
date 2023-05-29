@@ -23,10 +23,15 @@ const Carousel = () => {
   };
   return (
     <>
-      <h1>This is a Image Carousel</h1>
-      <button onClick={decreaseCount}>decrease</button>
-      <img src={images[count].link} alt=""></img>
-      <button onClick={increaseCount}>Increase</button>
+      <main>
+        <h1>This is an Image Carousel</h1>
+        <div>
+          <h2>{images[count].title}</h2>
+          <button className="left" onClick={decreaseCount}></button>
+          <img src={images[count].link} alt={images[count].title}></img>
+          <button className="right" onClick={increaseCount}></button>
+        </div>
+      </main>
     </>
   );
 };
