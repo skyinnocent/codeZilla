@@ -2,22 +2,30 @@ import "./Shopping.css";
 import ShoppingCartData from "./Data";
 import Cart from "./Cart";
 import { useState } from "react";
+const DUMMY_DATA = ShoppingCartData;
 const Shopping = () => {
-  console.log(ShoppingCartData);
-  const [inputValue, SetinputValue] = useState("");
+  const [inputValue, SetinputValue] = useState();
+  const [Data, setData] = useState(DUMMY_DATA);
   const handleChange = (event) => {
     SetinputValue(event.target.value);
   };
   const submitHandler = (event) => {
     event.preventDefault();
 
-    const id = ShoppingCartData.length + 1;
-    ShoppingCartData.push({
-      id: id,
-      item: inputValue,
-      text: "We then generate text which is randomly produced but has...",
-    });
+    const id = Data.length + 1;
+    setData([
+      ...Data,
+      {
+        id: id,
+        item: inputValue,
+        text: "We then generate text which is randomly produced but has...",
+      },
+    ]);
     SetinputValue("");
+  };
+  const handleDelete = (id) => {
+    const updatedData = Data.filter((item) => item.id !== id);
+    setData(updatedData);
   };
 
   return (
@@ -35,8 +43,15 @@ const Shopping = () => {
       </form>
 
       <div>
-        {ShoppingCartData.map((e) => {
-          return <Cart title={e.item} text={e.text} id={e.id}></Cart>;
+        {Data.map((e, i) => {
+          return (
+            <Cart
+              title={e.item}
+              text={e.text}
+              id={e.id}
+              onDelete={() => handleDelete(e.id)}
+            ></Cart>
+          );
         })}
       </div>
     </>
