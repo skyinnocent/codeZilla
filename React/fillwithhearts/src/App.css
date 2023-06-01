@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  border: 5px solid black;
+}
+
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+button {
+  padding: 50px;
+}
+span {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(red, green, blue, 0.8);
+  z-index: 999;
+}
