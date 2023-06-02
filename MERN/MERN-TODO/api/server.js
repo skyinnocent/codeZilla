@@ -25,7 +25,7 @@ app.post("/todo/new", async (req, res) => {
   const todo = new Todo({
     text: req.body.text,
   });
-  todo.save();
+  await todo.save();
   res.json(todo);
 });
 
