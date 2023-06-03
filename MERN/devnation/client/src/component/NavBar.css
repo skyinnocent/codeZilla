@@ -1,0 +1,144 @@
+:root {
+  --foreground: #fbfbfb;
+  --background: #f5f5f5;
+  --text: #290f66;
+  --text-alt: #5f5f5f;
+  --fill-color: #e7e5ee;
+}
+
+nav {
+  font-family: sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--text-alt);
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  background-color: var(--foreground);
+  /* border: 5px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0%;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+li {
+  margin-top: 25px;
+  text-decoration: none;
+  list-style: none;
+  margin-left: 20px;
+  height: 70%;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-alt);
+}
+a:hover {
+  color: var(--text);
+}
+li:first-child {
+  margin-right: 70px;
+  margin-bottom: 20px;
+}
+
+li:first-child:hover {
+  border-bottom: 2px solid transparent;
+}
+.logo {
+  display: block;
+  position: relative;
+  height: 20px;
+  width: 20px;
+  border: 2px solid var(--text);
+  border-radius: 3px;
+}
+
+.logo::before {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 20px;
+  width: 20px;
+  border: 2px solid var(--text);
+  border-radius: 3px;
+  top: 20%;
+  left: 20%;
+  background-color: var(--foreground);
+}
+
+li:hover {
+  border-bottom: 2px solid var(--text);
+  color: var(--background);
+}
+
+.searchinput {
+  position: fixed;
+  display: block;
+  height: 20px;
+  width: 350px;
+  border: none;
+  outline: none;
+  background-color: var(--fill-color);
+  padding: 5px;
+  border-radius: 5px;
+  top: 15px;
+}
+.search {
+  margin-left: 70px;
+}
+/* last child */
+.profile {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  justify-content: space-evenly;
+  right: 10px;
+  /* background-color: red; */
+  position: absolute;
+  right: 30px;
+  top: -25%;
+  cursor: pointer;
+}
+
+.profile:hover {
+  border-bottom: 2px solid transparent;
+  color: #290f66;
+}
+
+.profile img {
+  background-color: blue;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.triangle {
+  border: 10px solid transparent;
+  border-top-color: var(--text);
+  margin-top: 8px;
+  border-radius: 4px;
+}
+
+/* svg {
+  margin-left: 400px;
+} */
+.bell-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 400px;
+  margin-bottom: 25px;
+}
+
+.bell-icon:hover {
+  border-bottom: 2px solid transparent;
+}
