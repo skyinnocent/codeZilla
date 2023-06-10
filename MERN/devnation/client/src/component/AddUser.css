@@ -32,6 +32,7 @@
 .button {
   display: flex;
   align-items: center;
+  padding-right: 50px;
 }
 
 .adduser span {
@@ -43,6 +44,7 @@
 .formcontainer {
   background-color: var(--background);
   position: absolute;
-  right: 150%;
+  right: 250%;
   top: 150%;
+  box-shadow: -2px 4px 32px -4px rgba(0, 0, 0, 0.75);
 }

@@ -20,6 +20,7 @@ nav {
   align-items: center;
   justify-content: center;
   top: 0%;
+  z-index: 999;
 }
 
 ul {
@@ -57,8 +58,8 @@ li:first-child:hover {
 .logo {
   display: block;
   position: relative;
-  height: 20px;
-  width: 20px;
+  height: 23px;
+  width: 23px;
   border: 2px solid var(--text);
   border-radius: 3px;
 }
@@ -89,7 +90,7 @@ li:hover {
   border: none;
   outline: none;
   background-color: var(--fill-color);
-  padding: 5px;
+  padding: 15px;
   border-radius: 5px;
   top: 15px;
 }
@@ -97,7 +98,7 @@ li:hover {
   margin-left: 70px;
 }
 /* last child */
-.profile {
+.profile-name {
   display: flex;
   align-items: center;
   width: 200px;
@@ -110,12 +111,12 @@ li:hover {
   cursor: pointer;
 }
 
-.profile:hover {
+.profile-name:hover {
   border-bottom: 2px solid transparent;
   color: #290f66;
 }
 
-.profile img {
+.profile-name img {
   background-color: blue;
   height: 30px;
   width: 30px;

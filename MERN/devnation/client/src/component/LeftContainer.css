@@ -1,0 +1,6 @@
+.m-left-container {
+  /* border: 2px solid black; */
+  width: 70%;
+  margin: 5px;
+  overflow-y: scroll;
+}

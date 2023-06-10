@@ -49,7 +49,7 @@ const NavBar = () => {
               </svg>
             </a>
           </li>
-          <li className="profile">
+          <li className="profile-name">
             <img src="" alt=""></img>
             <div>Syed Masum</div>
             <div className="triangle"></div>

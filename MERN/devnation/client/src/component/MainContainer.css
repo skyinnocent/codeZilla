@@ -1,0 +1,6 @@
+.main-container {
+  display: flex;
+  height: 80vh;
+  width: 95vw;
+  /* border: 2px solid black; */
+}
