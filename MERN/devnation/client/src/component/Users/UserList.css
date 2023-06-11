@@ -42,6 +42,9 @@
   /* align-items: flex-start; */
   height: 70%;
 }
+/* .second {
+  overflow: visible;
+} */
 .second h2 {
   font-size: 15px;
   margin-top: 30px;

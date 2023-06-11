@@ -1,0 +1,10 @@
+nav {
+  position: fixed;
+  width: 100%;
+  background-color: bisque;
+  color: brown;
+  top: 0;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+}
