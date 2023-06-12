@@ -1,0 +1,19 @@
+.summary {
+  background-color: green;
+  margin-top: -12.5rem;
+  position: relative;
+  text-align: center;
+  width: 50%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+  border: 5px solid greenyellow;
+  border-radius: 50px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+.summary > p,
+h2 {
+  margin-bottom: 10px;
+  color: black;
+}

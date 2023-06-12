@@ -1,0 +1,17 @@
+.form {
+  /* border: 2px solid gold; */
+  width: 8rem;
+  text-align: center;
+}
+
+.form button {
+  color: black;
+  background-color: green;
+  padding: 0.3rem 2rem;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: larger;
+  font-weight: bold;
+}

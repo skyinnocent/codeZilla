@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid green;
+}
+.left > div,
+h3 {
+  margin-bottom: 0.3rem;
+}
+
+.left {
+  margin-left: 2rem;
+}
+.right {
+  margin-right: 2rem;
+  /* background-color: violet;
+  height: 100px;
+  width: 100px; */
+}
+.price {
+  font-size: large;
+  font-weight: bold;
+  color: green;
+}
