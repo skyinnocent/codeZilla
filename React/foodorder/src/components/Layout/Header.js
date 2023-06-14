@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import img from "./../../assets/meals.jpg";
 import classes from "./Header.module.css";
 import HeaderCartButton from "./HeaderCartButton";
-const Header = () => {
+const Header = (props) => {
   return (
     <Fragment>
       <header>
@@ -10,7 +10,7 @@ const Header = () => {
           <ul className={classes.ul}>
             <li>React Meals</li>
             <li>
-              <HeaderCartButton />
+              <HeaderCartButton onClick={props.onClick} />
             </li>
           </ul>
         </nav>

@@ -1,0 +1,37 @@
+.cartItems {
+  display: flex;
+}
+.cartItems .cartItem {
+  font-size: large;
+  font-weight: none;
+  list-style: none;
+  margin-bottom: 2px;
+}
+.total {
+  display: flex;
+  justify-content: space-between;
+}
+.total span {
+  font-weight: bold;
+  font-size: 20px;
+}
+.actions {
+  margin-left: 50%;
+  width: 13rem;
+}
+.actions button {
+  padding: 0.5rem 1rem;
+  margin: 1em;
+  border: 2px solid green;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.close {
+  border-color: green;
+  background-color: white;
+}
+button.order {
+  border-color: transparent;
+  background-color: green;
+  color: white;
+}
