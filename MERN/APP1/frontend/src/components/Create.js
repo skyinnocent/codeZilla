@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Create() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [age, setAge] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const submitHandler = async (event) => {
     event.preventDefault();
@@ -28,6 +30,7 @@ function Create() {
       setAge("");
       setEmail("");
       setName("");
+      navigate("/all");
     }
   };
   return (

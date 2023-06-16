@@ -83,8 +83,11 @@ nav {
   left: 50%;
   transform: translateX(-50%);
   width: 95vw;
-  height: 80vh;
+  height: 80%;
   display: flex;
+  /* justify-content: space-around; */
+  /* align-items: center; */
+  flex-wrap: wrap;
 }
 
 .card {
