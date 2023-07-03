@@ -17,7 +17,15 @@ function NotesList() {
   return (
     <div className="notes-list">
       {notes.map((note) => {
-        return <Note key={note._id} text={note.text} date={note.date} />;
+        console.log(note._id);
+        return (
+          <Note
+            key={note._id}
+            id={note._id}
+            text={note.text}
+            date={note.date}
+          />
+        );
       })}
       <NewNote />
     </div>

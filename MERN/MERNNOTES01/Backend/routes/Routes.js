@@ -1,10 +1,10 @@
-const Notes = require("../models/NoteModel");
+const Note = require("../models/NoteModel");
 const express = require("express");
 const router = express.Router();
 
 router.get("/", async (req, res) => {
   try {
-    const data = await Notes.find();
+    const data = await Note.find();
     res.status(200).json(data);
   } catch (error) {
     console.log(error);
@@ -14,15 +14,25 @@ router.get("/", async (req, res) => {
 
 router.post("/newnote", async (req, res) => {
   try {
-    const { text, date } = req.body;
-    const newNote = await Notes.create({
+    const { text } = req.body;
+    const newNote = await Note.create({
       text: text,
-      date: date,
     });
     res.status(201).json(newNote);
   } catch (error) {
     console.log(error);
     res.status(400).json({ error: error.message });
+  }
+});
+
+router.delete("/:id", async (req, res) => {
+  try {
+    const id = req.params.id;
+    const deletedNote = await Note.findByIdAndDelete({ _id: id });
+    res.status(200).json(deletedNote);
+  } catch (e) {
+    console.log(e);
+    res.end(e.message);
   }
 });
 

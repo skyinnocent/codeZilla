@@ -1,4 +1,3 @@
-import NewNote from "./components/NewNote";
 import NotesList from "./components/NotesList";
 
 function App() {

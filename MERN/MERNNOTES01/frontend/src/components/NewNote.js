@@ -1,26 +1,25 @@
 import React, { useState } from "react";
 
 function NewNote() {
-  const [noteTxt, setNoteTxt] = useState("");
-  const [charLimit, setCharLimit] = useState(200);
+  const [text, setText] = useState("");
 
   const noteTxtChangeHandler = (e) => {
-    setCharLimit(charLimit - 1);
-    setNoteTxt(e.target.value);
+    setText(e.target.value);
   };
 
   const addNoteHandler = async (req, res) => {
     try {
-      const response = await fetch("http://localhost/5000/addnew", {
+      const Text = { text };
+      console.log(Text);
+      const response = await fetch("http://localhost:5000/newnote", {
         method: "POST",
-        body: JSON.stringify(noteTxt),
+        body: JSON.stringify(Text),
         headers: {
           "Content-Type": "application/JSON",
         },
       });
       if (response.ok) {
-        setNoteTxt("");
-        res.end();
+        setText("");
       }
     } catch (e) {
       console.log(e.message);
@@ -33,14 +32,16 @@ function NewNote() {
         rows="8"
         cols="10"
         placeholder="Type to add a note......"
-        value={noteTxt}
+        value={text}
         onChange={noteTxtChangeHandler}
       ></textarea>
       <div className="note-footer">
         <small>200 remaining</small>
-        <button className="save" onClick={addNoteHandler}>
-          save
-        </button>
+        <form onSubmit={addNoteHandler}>
+          <button className="save" type="submit">
+            save
+          </button>
+        </form>
       </div>
     </div>
   );
