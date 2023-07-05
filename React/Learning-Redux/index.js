@@ -1,12 +1,13 @@
 //imports:
 import { createStore } from "redux";
+import thunk from "redux-thunk";
 //actions and payloads:
 const incByAmt = "incByAmt";
 const inc = "inc";
 const dec = "dec";
 
 // creating the store
-const store = createStore(reducer);
+const store = createStore(reducer, thunk.default);
 
 function reducer(state = { amount: 0 }, action) {
   switch (action.type) {
