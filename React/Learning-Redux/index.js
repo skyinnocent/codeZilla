@@ -23,8 +23,14 @@ const store = createStore(
 );
 
 // Action Creators
-function initFunc() {
-  return { type: accInit };
+function getUserPendingFunc() {
+  return { type: getUserPending };
+}
+function getAccUserFulfilledFunc(payload) {
+  return { type: getAccUserFulfilled, payload: payload };
+}
+function getAccUserRejectedFunc(err) {
+  return { type: getAccUserRejected, error: err };
 }
 function incFunc() {
   return { type: inc };
@@ -40,9 +46,10 @@ function getUser(id) {
     try {
       const { data } = await axios.get(`http://localhost:3000/users/${id}`);
       // dispatch(incByAmtfunc(data.amount));
-      dispatch(incFunc());
-    } catch (err) {
-      console.log(err);
+      dispatch(getAccUserFulfilledFunc(data.amount));
+    } catch (error) {
+      // console.log(error);
+      dispatch(getAccUserRejectedFunc(error.message));
     }
   };
 }
@@ -63,8 +70,14 @@ function accountReducer(state = { amount: 0 }, action) {
     case incByAmt: {
       return { amount: state.amount + action.payload };
     }
-    case accInit: {
-      return { amount: state.amount + 1 };
+    case getUserPending: {
+      return { ...state, pending: true };
+    }
+    case getAccUserFulfilled: {
+      return { amount: state.amount + action.payload, pending: false };
+    }
+    case getAccUserRejected: {
+      return { amount: state.amount, error: action.error, pending: false };
     }
     default:
       return state;
