@@ -2,5 +2,9 @@
   "users": [
     { "id": 1, "amount": 500 },
     { "id": 1, "amount": 200 }
+  ],
+  "bonus": [
+    { "id": 1, "points": 1 },
+    { "id": 1, "points": 1 }
   ]
 }
