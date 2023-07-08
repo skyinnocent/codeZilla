@@ -44,7 +44,8 @@ function incByAmtfunc(amt) {
 function getUser(id) {
   return async (dispatch, state) => {
     try {
-      const { data } = await axios.get(`http://localhost:3000/users/${id}`);
+      dispatch(getUserPendingFunc());
+      const { data } = await axios.get(`http://localhost:3000/account/${id}`);
       // dispatch(incByAmtfunc(data.amount));
       dispatch(getAccUserFulfilledFunc(data.amount));
     } catch (error) {
